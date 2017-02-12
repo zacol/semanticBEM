@@ -1,0 +1,62 @@
+input[type=text], 
+input[type=email], 
+input[type=search], 
+input[type=password] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.input {
+    flex: 1 0 auto;
+    max-width: 100%;
+    padding: 8px 20px;
+    outline: 0;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    border-radius: 4px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    transition: border-color .1s ease;
+
+    &:not(&--error):focus {
+        border-color: #85B7d9;
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    /**********************
+      Global modificators
+    ***********************/
+
+    /* Disabled */
+
+    &--disabled,
+    &--readonly {
+        opacity: 0.45;
+        pointer-events: none;
+    }
+
+    /* Readonly */
+
+    &--readonly {
+        background-color: #eee;
+        pointer-events: none;
+    }
+
+    /* Fluid */
+
+    &--fluid {
+        display: block;
+        width: 100%;
+    }
+
+    /* Error */
+
+    &--error {
+        border-color: #e0b4b4;
+        background-color: #fff6f6;
+        color: #9f3a38;
+    }
+}

@@ -1,0 +1,243 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Project</title>
+    <link rel="stylesheet" href="stylesheets/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Generate using http://realfavicongenerator.net/ -->
+
+
+    
+  </head>
+  <body>
+    
+  <div class="container">
+    <h1>Buttons</h1>
+
+    <h3>Standard button</h3>
+    
+    <div class="row">
+      <button class="btn">Standard button</button>
+      <button class="btn btn--basic">Basic button</button>
+    </div>
+    
+    <hr>
+
+    <h3>Disabled button</h3>
+
+    <div class="row">
+      <button class="btn btn--disabled">Disabled standard</button>
+      <button class="btn btn--basic btn--disabled">Disabled basic</button>
+    </div>
+
+    <hr>
+
+    <h3>Types</h3>
+
+    <div class="row">
+      <button class="btn">Neutral</button>
+      <button class="btn btn--primary">Primary</button>
+      <button class="btn btn--secondary">Secondary</button>
+      <button class="btn btn--positive">Positive</button>
+      <button class="btn btn--negative">Negative</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn--basic">Neutral</button>
+      <button class="btn btn--basic btn--primary">Primary</button>
+      <button class="btn btn--basic btn--secondary">Secondary</button>
+      <button class="btn btn--basic btn--positive">Positive</button>
+      <button class="btn btn--basic btn--negative">Negative</button>
+    </div>
+
+    <hr>
+
+    <h3>Fluid</h3>
+
+    <div class="row">
+      <button class="btn btn--fluid">Fluid</button>
+    </div>
+    
+    <div class="row">
+      <button class="btn btn--basic btn--fluid">Fluid</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn--primary btn--fluid">Fluid</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn--basic btn--primary btn--fluid">Fluid</button>
+    </div>
+
+    <hr>
+    
+    <h3>Multiline button &amp; Truncate</h3>
+    
+
+    <div class="row">
+      <button class="btn btn--fluid">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quis exercitationem officiis. Deserunt sit, adipisci molestiae cum porro provident, voluptas nesciunt aperiam fuga id quidem cupiditate obcaecati amet nemo atque.</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn--truncate btn--fluid">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quis exercitationem officiis. Deserunt sit, adipisci molestiae cum porro provident, voluptas nesciunt aperiam fuga id quidem cupiditate obcaecati amet nemo atque.</button>
+    </div>
+    
+    <hr>
+
+    <h3>Loading</h3>
+
+    <div class="row">
+      <button class="btn btn--loading">Neutral</button>
+      <button class="btn btn--primary btn--loading">Primary</button>
+      <button class="btn btn--secondary btn--loading">Secondary</button>
+      <button class="btn btn--positive btn--loading">Positive</button>
+      <button class="btn btn--negative btn--loading">Negative</button>
+    </div>
+
+    <div class="row">
+      <button class="btn btn--basic btn--loading">Basic</button>
+      <button class="btn btn--basic btn--primary btn--loading">Primary</button>
+      <button class="btn btn--basic btn--secondary btn--loading">Secondary</button>
+      <button class="btn btn--basic btn--positive btn--loading">Positive</button>
+      <button class="btn btn--basic btn--negative btn--loading">Negative</button>
+    </div>
+
+    <hr>
+
+    <h1>Inputs</h1>
+
+    <h3>Standard input</h3>
+
+    <div class="row">
+      <input type="text" placeholder="Search..." class="input">
+    </div>
+
+    <hr>
+
+    <h3>Disabled input</h3>
+
+    <div class="row">
+      <input type="text" placeholder="Search..." class="input input--disabled">
+    </div>
+
+    <hr>
+
+    <h3>Readonly input</h3>
+
+    <div class="row">
+      <input type="text" placeholder="Search..." value="Query" class="input input--readonly">
+    </div>
+
+    <hr>
+
+    <h3>Error input</h3>
+
+    <div class="row">
+      <input type="text" placeholder="Search..." class="input input--error">
+    </div>
+
+    <hr>
+
+    <h3>Fluid input</h3>
+
+    <div class="row">
+      <input type="text" placeholder="Search..." class="input input--fluid">
+    </div>
+
+    <hr>
+
+    <h1>Input group</h1>
+
+    <h3>input-extraed input</h3>
+
+    <div class="row">
+      <div class="input-group">
+        <span class="input-group__addon input-extra">http://</span>
+        <input type="text" placeholder="mysite.com" class="input-group__input input">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-group">
+        <input type="text" placeholder="Enter weight" class="input-group__input input">
+        <span class="input-group__addon input-extra">.00</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-group">
+        <span class="input-group__addon input-extra">$</span>
+        <input type="text" placeholder="Amount" class="input-group__input input">
+        <span class="input-group__addon input-extra input-extra--basic">.00</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-group input-group--fluid">
+        <span class="input-group__addon input-extra">$</span>
+        <input type="text" placeholder="Amount" class="input-group__input input">
+        <span class="input-group__addon input-extra input-extra--basic">.00</span>
+      </div>
+    </div>
+
+    <hr>
+
+    <h3>Input &amp; buttons</h3>
+
+    <div class="row">
+      <div class="input-group">
+        <input type="text" placeholder="Enter weight" class="input-group__input input">
+        <a href="#" class="input-group__addon btn btn--primary">Send</a>
+        <a href="#" class="input-group__addon btn">Cancel</a>
+      </div>
+    </div>
+
+    <h1>Form</h1>
+
+    <form class="form">
+      <div class="form__group">
+        <label for="" class="form__label">Nr identyfikacyjny</label>
+        <input type="text" placeholder="4883 1233 9573 1232" class="input input--fluid">
+      </div>
+      <div class="form__group">
+        <label for="" class="form__label">Imię i nazwisko</label>
+        <div class="form__row">
+          <div class="form__group form__group--1of2">
+            <input type="text" placeholder="Jan" class="input input--fluid">
+          </div>
+          <div class="form__group form__group--1of2">
+            <input type="text" placeholder="Kowalski" class="input input--fluid">
+          </div>
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="form__group form__group--1of2">
+          <label for="" class="form__label">Nr telefonu</label>
+          <div class="input-group input-group--fluid">
+            <span class="input-group__addon input-extra">+48</span>
+            <input type="text" placeholder="123 456 678" class="input-group__input input">
+          </div>
+        </div>
+        <div class="form__group form__group--1of2">
+          <label for="" class="form__label">GitHub</label>
+          <div class="input-group input-group--fluid">
+            <span class="input-group__addon input-extra">https://github.com/</span>
+            <input type="text" placeholder="zacol" class="input-group__input input">
+          </div>
+        </div>
+      </div>
+      <div class="form__group">
+        <button class="btn btn--primary">Zapisz</button>
+      </div>
+    </form>
+  </div>
+  
+
+    
+      <script src="javascripts/app.js"></script>
+    
+  </body>
+</html>

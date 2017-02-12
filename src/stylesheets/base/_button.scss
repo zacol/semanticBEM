@@ -1,0 +1,228 @@
+.btn {
+    $this: &!default;
+    display: inline-block;
+    vertical-align: baseline;
+    min-height: 36px;    
+    padding: 11px 20px;
+    outline: 0;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px transparent inset;
+    background-color: #e0e1e2;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    cursor: pointer;
+    user-select: none;
+    transition: 
+        opacity .250s ease, 
+        background-color .250s ease,
+        color .250s ease,
+        box-shadow .250s ease,
+        background .250s ease;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #cacbcd;
+        color: rgba(0, 0, 0, 0.9);
+    }
+
+    /********
+      Types
+    *********/
+
+    /* Basic */
+
+    &--basic {
+        box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+        background-color: #fff;
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: 400;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.35) inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+            color: rgba(0,0,0,.8);
+        }
+    }
+
+    /*********
+      Colors
+    **********/
+
+    /* Primary */
+
+    &--primary:not(&--basic) {
+        background-color: #2185d0;
+        color: #fff;
+        text-shadow: none;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #1678c2;
+            color: #fff;
+        }
+    }
+
+    &--primary#{$this}--basic {
+        box-shadow: 0 0 0 1px #2185d0 inset;
+        color: #2185d0;
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: 0 0 0 1px #1678c2 inset;
+            color: #1678c2;
+        }
+    }
+
+    /* Secondary */
+
+    &--secondary:not(&--basic) {
+        background-color: #1b1c1d;
+        color: #fff;
+        text-shadow: none;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #27292a;
+            color: #fff;
+        }
+    }
+
+    &--secondary#{$this}--basic {
+        box-shadow: 0 0 0 1px #1b1c1d inset;
+        color: #1b1c1d;
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: 0 0 0 1px #27292a inset;
+            color: #27292a;
+        }
+    }
+
+    /* Positive */
+
+    &--positive:not(&--basic) {
+        background-color: #21ba45;
+        color: #fff;
+        text-shadow: none;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #16ab39;
+            color: #fff;
+        }
+    }
+
+    &--positive#{$this}--basic {
+        box-shadow: 0 0 0 1px #21ba45 inset;
+        color: #21ba45;
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: 0 0 0 1px #16ab39 inset;
+            color: #16ab39;
+        }
+    }
+
+    /* Negative */
+
+    &--negative:not(&--basic) {
+        background-color: #db2828;
+        color: #fff;
+        text-shadow: none;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #d01919;
+            color: #fff;
+        }
+    }
+
+    &--negative#{$this}--basic {
+        box-shadow: 0 0 0 1px #db2828 inset;
+        color: #db2828;
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: 0 0 0 1px #d01919 inset;
+            color: #d01919;
+        }
+    }
+
+    /**********************
+      Global modificators
+    ***********************/
+
+    /* Disabled */
+
+    &--disabled {
+        opacity: 0.45;
+        box-shadow: none;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    /* Fluid */
+
+    &--fluid {
+        display: block;
+        width: 100%;
+    }
+
+    /* Truncate */
+
+    &--truncate {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    /* Loading */
+
+    &--loading {
+        position: relative;
+        color: transparent !important;
+        cursor: default;
+        pointer-events: auto;
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            width: 14px;
+            height: 14px;
+            margin: -9px 0 0 -9px;
+            border-radius: 100%;
+            border-top: 2px solid rgba(0, 0, 0, 0.15);
+            border-right: 2px solid rgba(0, 0, 0, 0.15);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            border-left: 2px solid #000;
+            animation: loader .6s linear;
+            animation-iteration-count: infinite;
+        }
+        &:not(#{$this}--basic)#{$this}--primary:before,
+        &:not(#{$this}--basic)#{$this}--secondary:before,
+        &:not(#{$this}--basic)#{$this}--positive:before,
+        &:not(#{$this}--basic)#{$this}--negative:before, {
+            border-left: 2px solid #fff;
+        }
+    }
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
